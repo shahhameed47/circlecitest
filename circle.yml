@@ -22,7 +22,7 @@ jobs:
           command: cd javatest1
       - run:
           name: echo list
-          command: echo .* *    
+          command: ls    
       - run:
           name: Print the Current PWD PATH
           command: echo $PATH                    
