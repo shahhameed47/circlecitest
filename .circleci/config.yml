@@ -2,8 +2,8 @@ version: 2
 jobs:
   build:
     branches:
-      only:
-        - javatest1
+      ignore:
+        - master
 
     working_directory: ~/circlecitest
 
