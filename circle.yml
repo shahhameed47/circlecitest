@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: circleci/openjdk:8-jdk-browsers
 
-    working_directory: ~/circlecitest
+    working_directory: ~/circlecitest/javatest1
     steps:
 
       - checkout
@@ -19,7 +19,7 @@ jobs:
           command: echo $PWD          
       - run:
           name: Greeting
-          command: cd javatest1
+          command: echo .* *
       - run:
           name: echo list
           command: ls    
