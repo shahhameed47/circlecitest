@@ -1,7 +1,10 @@
 version: 2
 jobs:
   build:
-    
+    branches:
+      only:
+        - javatest1
+
     working_directory: ~/javacci
 
     docker:
