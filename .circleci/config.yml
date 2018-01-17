@@ -5,7 +5,7 @@ jobs:
       only:
         - javatest1
 
-    working_directory: ~/circleci
+    working_directory: ~/circlecitest
 
     docker:
       - image: circleci/openjdk:8-jdk-browsers
@@ -15,14 +15,14 @@ jobs:
       - checkout
 
       - restore_cache:
-          key: circleci-{{ checksum "pom.xml" }}
+          key: circlecitest1-{{ checksum "pom.xml" }}
       
       - run: mvn dependency:go-offline
       
       - save_cache:
           paths:
             - ~/.m2
-          key: circleci-{{ checksum "pom.xml" }}
+          key: circlecitest1-{{ checksum "pom.xml" }}
       
       - run: mvn package
       
