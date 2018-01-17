@@ -30,7 +30,7 @@ jobs:
       
       - save_cache:
           paths:
-            - ~/.m2
+            - ~/javatest1/.m2
           key: javatest1-{{ checksum "pom.xml" }}
       
       - run: mvn package
