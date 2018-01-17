@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: circleci/openjdk:8-jdk-browsers
 
-    working_directory: ~/javatest1  
+    working_directory: ~/circletest/javatest1  
     steps:
 
       - checkout
@@ -32,7 +32,7 @@ jobs:
       
       - save_cache:
           paths:
-            - ~/javatest1/.m2
+            - ~/.m2
           key: javatest1-{{ checksum "pom.xml" }}
       
       - run: mvn package
