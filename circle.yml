@@ -9,9 +9,6 @@ jobs:
 
       - checkout
       - run:
-          name: Greeting
-          command: echo .* *
-      - run:
           name: Print the Current Time
           command: date
       - run:
@@ -20,6 +17,9 @@ jobs:
       - run:
           name: Print the Current PWD PATH
           command: echo $PWD          
+      - run:
+          name: Greeting
+          command: echo .* *
       - run:
           name: Print the Current PWD PATH
           command: echo $PATH                    
