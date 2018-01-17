@@ -1,7 +1,11 @@
 version: 2
 jobs:
   build:
-    
+    general:
+        branches:
+            only:
+            - javatest1
+            - release
     docker:
       - image: circleci/openjdk:8-jdk-browsers
 
@@ -32,7 +36,7 @@ jobs:
       
       - save_cache:
           paths:
-            - ~/javatest1/.m2
+            - ~/.m2
           key: javatest1-{{ checksum "pom.xml" }}
       
       - run: mvn package
