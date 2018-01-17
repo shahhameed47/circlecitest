@@ -4,13 +4,13 @@ jobs:
     docker:
       - image: circleci/openjdk:8-jdk-browsers
 
-    working_directory: ~/circlecitest
+    # working_directory: ~/circlecitest
     steps:
 
       - checkout
       - run:
           name: Greeting
-          command: echo Hello, world.
+          command: echo .* *
       - run:
           name: Print the Current Time
           command: date
