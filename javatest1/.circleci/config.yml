@@ -9,7 +9,21 @@ jobs:
     steps:
 
       - checkout
-
+      - run:
+          name: Greeting
+          command: echo Hello, world.
+      - run:
+          name: Print the Current Time
+          command: date
+      - run:
+          name: Print the Current HOME PATH
+          command: echo $HOME 
+      - run:
+          name: Print the Current PWD PATH
+          command: echo $PWD          
+      - run:
+          name: Print the Current PWD PATH
+          command: echo $PATH                    
       - restore_cache:
           key: javatest1-{{ checksum "pom.xml" }}
       
