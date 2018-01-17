@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     
-    working_directory: ~/javatest1
+    working_directory: ~/circlecitest/javatest1
 
     docker:
       - image: circleci/openjdk:8-jdk-browsers
