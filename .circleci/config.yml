@@ -3,7 +3,7 @@ jobs:
   build:
     branches:
       only:
-        - javatest2
+        - javatest1
 
     working_directory: ~/circlecitest
 
@@ -15,14 +15,14 @@ jobs:
       - checkout
 
       - restore_cache:
-          key: circlecitest2-{{ checksum "pom.xml" }}
+          key: circlecitest1-{{ checksum "pom.xml" }}
       
       - run: mvn dependency:go-offline
       
       - save_cache:
           paths:
             - ~/.m2
-          key: circlecitest2-{{ checksum "pom.xml" }}
+          key: circlecitest1-{{ checksum "pom.xml" }}
       
       - run: mvn package
       
