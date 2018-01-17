@@ -19,7 +19,10 @@ jobs:
           command: echo $PWD          
       - run:
           name: Greeting
-          command: ls
+          command: cd javatest1
+      - run:
+          name: echo list
+          command: echo .* *    
       - run:
           name: Print the Current PWD PATH
           command: echo $PATH                    
