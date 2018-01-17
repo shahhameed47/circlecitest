@@ -19,7 +19,7 @@ jobs:
           command: echo $PWD          
       - run:
           name: Greeting
-          command: echo .* *
+          command: ls
       - run:
           name: Print the Current PWD PATH
           command: echo $PATH                    
