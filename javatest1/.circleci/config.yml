@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: circleci/openjdk:8-jdk-browsers
 
-    working_directory: ~/javatest1  
+    working_directory: ~/circleci/javatest1  
     steps:
 
       - checkout
