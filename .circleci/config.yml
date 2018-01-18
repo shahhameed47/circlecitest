@@ -14,8 +14,8 @@ jobs:
 
       - checkout
       - run:
-          name: current path
-          command: cd /home/circleci/.m2 && ls
+          name: m2 path
+          command: whereis /.m2
 
       - run:
           name: current 
