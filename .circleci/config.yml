@@ -15,7 +15,7 @@ jobs:
       - checkout
       - run:
           name: current path
-          command: cd /home/circleci && ls
+          command: cd /home/circleci/.m2 && ls
 
       - restore_cache:
           key: circlecitest1-{{ checksum "pom.xml" }}
