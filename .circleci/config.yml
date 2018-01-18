@@ -17,7 +17,7 @@ jobs:
           name: current path
           command: cd /home/circleci/.m2 && ls
 
-     - run:
+      - run:
           name: current 
           command: pwd
 
